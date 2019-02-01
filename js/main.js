@@ -1,29 +1,5 @@
-var form = document.querySelector('.formWithValidation');
-var validateBtn = form.querySelector('.validateBtn');
-var Task = form.querySelector('.Task');
-var TaskDeskription = form.querySelector('.TaskDeskription');
-var priority = form.querySelector('.priority');
-var fields = form.querySelectorAll('.field');
+
 var c = 'white';
-
-    var task = document.getElementById('task');
-    var taskPlaceholder = document.getElementById('taskPlaceholder');
-    var taskPlaceholderPriority = document.getElementById('taskPlaceholderPriority');
-    var taskPlaceholderPriorityClr = document.getElementById('taskPlaceholderPriorityClr');
-    var placeholderTask = document.getElementById('placeholder-task');
-    var highPriority = document.getElementById('High').value;
-    var mediumPriority = document.getElementById('Medium');
-    var lowPriority = document.getElementById('Low');
-     
-
-    var c = 'black';
- 
-
-form.addEventListener('button', function(event){
-    event.preventDefault();
-   
-    
-})
 
 
 function Selected(a) {
@@ -45,7 +21,12 @@ function Selected(a) {
 
 function test3(){
     
-    
+    var form = document.querySelector('.formWithValidation');
+    var validateBtn = form.querySelector('.validateBtn');
+    var Task = form.querySelector('.Task');
+    var TaskDescription = form.querySelector('.TaskDescription');
+    var priority = form.querySelector('.priority');
+    var fields = form.querySelectorAll('.field');
     
     
     var placeholderTask2= document.createElement('div');
@@ -64,22 +45,21 @@ function test3(){
     taskPlaceholderPriorityClr2.style.backgroundColor = c;
     
      
-    var PlaceholderDescription = document.createElement('div');
-    PlaceholderDescription.className = 'placeholder-description';
+    var PlaceholderDescription2 = document.createElement('div');
+    PlaceholderDescription2.className = 'placeholder-description';
     
     
     
-    
-    
-    
-    
+
     placeholderTaskText.innerHTML = Task.value;
+    PlaceholderDescription2.innerHTML = 'nonono';
+    
     task.appendChild(taskPlaceholder2);
     taskPlaceholderPriority2.appendChild(taskPlaceholderPriorityClr2);
     taskPlaceholder2.appendChild(taskPlaceholderPriority2);    
     taskPlaceholder2.appendChild(placeholderTask2);
     placeholderTask2.appendChild(placeholderTaskText);
-    taskPlaceholder2.appendChild(PlaceholderDescription);
+    taskPlaceholder2.appendChild(PlaceholderDescription2);
     
     
     
