@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,900" rel="stylesheet">
+    <link href="http://allfont.ru/allfont.css?fonts=micra" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<header>
+    <div class="container-fluid">
+        <div class="row justify-content-between">
+            <div class="col-5">
+               <div class="logo">
+                <h1>TASK MANAGER</h1>
+                </div>
+            </div>
+            <div class="col-1 ">
+            <div class="logo">
+                <img src="img/ICON.png" alt="icon">
+            </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+   <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Создание задачи</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      
+      
+      
+      
+      
+      <div class="modal-body">
+           <form class="formWithValidation field">
+           <div>
+           <div>
+           <label for="">Название:</label>
+           </div>
+           <div>
+            <input type="text" class="Task field" onkeyup = "check()" id="TaskField"  >
+           </div>
+            </div>
+            
+           <div>
+           <div>
+           <label for="">Краткое описание:</label>
+           </div>
+           <div>
+               <textarea class="TaskDeskription field"></textarea>
+           </div>
+            </div>
+           
+           <div>
+           <div>
+           <label for="">Приоритет:</label>
+           </div>
+           <div>
+             <select class="priority " id="prioritySelect" onchange="Selected(this)" >
+                 <option selected ></option>
+                 <option value="1" id="High" >Высокий</option>
+                 <option value="2" id="Medium">Средний</option>
+                 <option value="3" id="Low">Низкий</option>
+             </select>
+             <select id="mySelect" onchange="fun1()">
+  <option value="3 кг">Apple</option>
+  <option value="15 кг">Orange</option>
+  <option value="7 кг">Pineapple</option>
+  <option value="5 кг">Banana</option>
+</select>
+           </div>
+            </div>
+            <button data-dismiss="modal" type="button" class="btn btn-primary validateBtn"   id="btn" disabled>Save changes</button>
+            </form>
+      </div>
+      
+      
+      
+      
+      
+    </div>
+  </div>
+</div>
+   
+    <div class="container-fluid">
+        <div class="row h-100">
+            <div class="col-2 settings ">
+                <div class="row justify-content-center ">
+                    <div class="col-10">
+                        <button id="createBtn" class="btn btn-primary"  data-toggle="modal" data-target="#exampleModalCenter">ДОБАВИТЬ <br> ЗАДАЧУ</button>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-10  ">
+                    <button class="btn btn-primary" onclick="test3()">СОРТИРОВКА</button></div>
+                </div>
+            </div>
+            <div class="col-10" >
+               <div class="row justify-content-center">
+               
+               
+               
+                <div class="col-11" id="task">
+                  
+                   <div class="placeholder" id="taskPlaceholder">
+                   
+                    <div class="placeholder-priority" id="taskPlaceholderPriority">
+                       
+                        <div class="placeholder-priority-clr placeholder-priority-clr-yellow" id="taskPlaceholderPriorityClr"></div>
+                    </div>
+                    
+                    
+                    
+                    <div id="placeholder-task" class="placeholder-task">
+                        <h1> Go</h1>
+                    </div>
+                    <div class="placeholder-description">
+                     на главной странице горизонтальным списком отображается список задач
+                    </div>
+                    <div class="placeholder-data">
+                        29.01.2019
+                    </div>
+                    <div class="placeholder-status">
+                        <input type="checkbox" class="checkbox">
+                    </div>
+                </div>
+                </div>
+                
+                
+                
+                
+            </div>
+            </div>
+        </div>
+    </div>
+</main>
+<body>
+   
+
+      
+       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+        <script src="js/js.js" defer></script>
+        <script src="js/main.js" defer></script>
+<noscript>Текст</noscript>
+</body>
+
+</html>
